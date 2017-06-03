@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Library</title>
+        <!-- stylesheets -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h1 class="title">Library</h1>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-xs-12 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-heading bold">Books</div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="">book 1</a>
+                                </li>        
+                                <li class="list-group-item">
+                                    <a href="">book 2</a>
+                                </li>        
+                                <li class="list-group-item">
+                                    <a href="">book 3</a>
+                                </li>        
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-5">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Book details</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                <span class="h3" id="name">title of the book</span>
+                            </p>
+                            <p>
+                                <span> author: </span>
+                                <span class="h3" id="author">My Name </span>
+                            </p>
+                            <p>
+                                <span> ISBN: </span>
+                                <span class="h3" id="isbn">123456789 </span>
+                            </p>
+                            <div class="alert alert-warning text-center" id="rented">
+                                <strong>The book is currently rented!</strong>
+                            </div>
+                            <div class="alert alert-danger text-center" id="overdue">
+                                <strong>The book rental is overdue since <span id="overdueDays">1</span> days</strong>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <h4>Rental Details</h4>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name of renter</th>
+                                        <th>Date of rental</th>
+                                        <th>Return date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rentals">
+                                    <tr>
+                                        <td> Me </td>
+                                        <td> 12/05/2017 </td>
+                                        <td> 15/05/2017 </td>
+                                    </tr>
+                                    <tr>
+                                        <td> you </td>
+                                        <td> 12/05/2017 </td>
+                                        <td> 15/05/2017 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- scripts -->
+        <script src="scripts/jquery-3.2.0.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>

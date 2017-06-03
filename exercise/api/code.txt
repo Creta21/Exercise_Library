@@ -1,0 +1,5 @@
+cd /cygdrive/c/Users/Giannis/Desktop/exercise/api
+
+rm -r stubs
+
+java -jar swagger-codegen-cli-2.2.2.jar generate --model-package com.exercise.model --api-package com.exercise.api -i swagger.json -l spring -o stubs

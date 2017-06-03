@@ -1,0 +1,75 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Library
+  license:
+    name: GPLv3
+    url: 'http://www.gnu.org/licenses/'
+host: 'localhost:8082'
+basePath: /api
+schemes:
+  - http
+produces:
+  - application/json
+paths:
+  /books:
+    get:
+      summary: Returns a list of all the books
+      description: Returns a list of all the books
+      responses:
+        '200':
+          description: The list of all the books
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/BookItem'
+  '/books/{id}':
+    get:
+      summary: Returns the requested book
+      description: Returns the requested book
+      parameters:
+        - name: id
+          type: integer
+          in: path
+          required: true
+          description: The id of the requested book
+      responses:
+        '200':
+          description: The requested book
+          schema:
+            $ref: '#/definitions/Book'
+        '404':
+          description: book not found.
+definitions:
+  BookItem:
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+  Book:
+    properties:
+      isbn:
+        type: string
+      name:
+        type: string
+      author:
+        type: string
+      isRented:
+        type: boolean
+      overdueDays:
+        type: integer
+      rentals:
+        type: array
+        items:
+          $ref: '#/definitions/Rental'
+  Rental:
+    properties:
+      personName:
+        type: string
+      date:
+        type: string
+        format: date
+      returnDate:
+        type: string
+        format: date

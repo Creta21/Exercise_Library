@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Library</title>
+        <!-- stylesheets -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h1 class="title">Library</h1>
+                </div>
+            </div>
+            <!-- List of Books -->
+            <div class="row" >
+                <div class="col-xs-12 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-heading bold">Books</div>
+                        <div class="panel-body">
+                            <ul id="booksList" class="list-group">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Details of selected book -->
+                <div class="col-xs-12 col-sm-5 col-md-5" id="bookDetails" style="display:none;">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Book details</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                <span class="h3" id="name"></span>
+                            </p>
+                            <p>
+                                <span> author: </span>
+                                <span class="h3" id="author"></span>
+                            </p>
+                            <p>
+                                <span> ISBN: </span>
+                                <span class="h3" id="isbn"></span>
+                            </p>
+                            <div class="alert alert-warning text-center" id="rented">
+                                <strong>The book is currently rented!</strong>
+                            </div>
+                            <div class="alert alert-danger text-center" id="overdue">
+                                <strong>The book rental is overdue since <span id="overdueDays">1</span> days</strong>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <h4>Rental Details</h4>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name of renter</th>
+                                        <th>Date of rental</th>
+                                        <th>Return date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rentals">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- scripts -->
+        <script src="scripts/jquery-3.2.0.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
